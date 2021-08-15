@@ -1,7 +1,10 @@
 # Welcome to Mars!
 
 Hi! Here is my attempt to colonize Mars.
-I have decided to keep it nice and simple. Simple for me means clean code and unit testing. I would have loved adding extra features but that was not possible without sacrificing the code quality due to the lack of time on my side.
+
+I have decided to keep it nice and simple. Simple for me means clean code and unit testing.
+I would have loved adding extra features but that was not possible without sacrificing the code quality due to the lack of time on my side.
+
 The project is built with Spring boot and can be tested through a REST API or through the command line.
 
 But before going into how we can run the project there are a few things to note.
