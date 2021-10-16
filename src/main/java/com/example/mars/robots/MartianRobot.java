@@ -44,8 +44,7 @@ public class MartianRobot implements Robot {
         }
         Position newPosition = instruction.execute(currentPosition);
         if(map.doesLocationHaveScent(currentPosition)){
-            currentPosition = new Position(currentPosition.getCoordinates(),newPosition.getDirection());
-            return currentPosition;
+            return getPositionIfHasScent(newPosition);
         }
         if(!newPosition.getCoordinates().equals(currentPosition.getCoordinates())
         && !isRobotOutOfBounds(newPosition)){
@@ -57,6 +56,10 @@ public class MartianRobot implements Robot {
             currentPosition = newPosition;
         }
         return currentPosition;
+    }
+
+    private Position getPositionIfHasScent(Position newPosition) {
+        return new Position(currentPosition.getCoordinates(), newPosition.getDirection());
     }
 
     private void addVisitedLocations(Position newPosition) {
